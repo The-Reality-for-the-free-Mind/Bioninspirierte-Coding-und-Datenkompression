@@ -1,0 +1,58 @@
+\documentclass{uni}
+\usepackage{enumerate}
+
+\begin{document}
+
+
+% Parameters for \maketitle 
+% #1: Number of the current home assignment
+% #2: Date the assignment is due
+% #3: Name of tutor
+% #4: Number of the tutorial
+% #5: Name of the first group member
+% #6: Name of the second group member
+% #7: Name of the third  group member
+
+
+
+% \maketitle{Nummer}{Abgabedatum}{Tutor-Name}{Gruppennummer}
+%           {Teilnehmer 1}{Teilnehmer 2}{Teilnehmer 3}
+\maketitle{1}{06.11.2012}{Konrad Gadzicki und Tobias Kluth}{}
+          {Liuqing Yang}{}{}
+
+\section{Entropie und Redundanz}
+Eine Quelle gibt Zeichen aus dem Alphabet $A = \{a_1, a_2, a_3, a_4, a_5\}$ mit den Wahrscheinlichkeiten $P(a_1) = 0.15, P(a_2) = 0.04, P(a_3) = 0.26, P(a_4) = 0.05$ und $P(a_5) = 0.5$
+
+\begin{enumerate}[a)]
+	\item Berechnet die Entropie der Quelle
+	\item Bestimmt einen Huffman Code f\"ur diese Quelle
+	\item Bestimmt die durchschnittliche Codewortlänge für den Code in b) und berechnet die Redundanz.
+\end{enumerate}
+
+\section{Unfaire Münzen und Informationsgehalt}
+Betrachtet hierzu ein einfaches Münzwurf-Experiment, welches bekanntermaÿen nur
+zwei unterschiedliche Resultate haben kann: Kopf oder Zahl. Berechnet zunächst die Entropie
+für den Wurf einer "`fairen"' Münze. Simuliert danach eine gezinkte Münze, indem Ihr die Wahrscheinlichkeit $p$ für eines der Elementarereignisse in Schritten von 0.05 von 0.05 bis 0.95 variiert
+(Warum nicht zwischen 0 und 1?) und dem anderen Ereignis jeweils eine Wahrscheinlichkeit
+von 1-p zuweist. Bestimmt die Entropie eines Münzwurfexperiments für diese unterschiedlichen
+Wahrscheinlichkeiten und plottet die Resultate. (Tragt auf der x-Achse die Wahrscheinlichkeit
+für eines der Elementarereignisse und auf der y-Achse die dazugehörige Entropie auf.)\\
+\\
+Was fällt auf? Bei welcher Wahrscheinlichkeit ist die Entropie des Experiments am höchsten?
+Wie ist dies zu erklären? Bitte gebt Eure Lösung inklusive dem Plot der Resultate und dem
+dazugehörigen Code ab.
+\section{Huffman Codes}
+Implementiert ein Programm, welches für ein gegebenes Alphabet und den dazugehörigen Wahrscheinlichkeiten einen Huffman-Code mit minimaler Varianz der Codewortlängen generiert. Achtet bei Eurer Implementierung darauf, dass diese möglichst generisch ist, da diese im Laufe des Semesters für unterschiedliche Symboltypen wiederverwendet werden soll.\\
+\\
+Der Konstruktor Eurer Klasse bekommt ein Array übergeben, wobei jedes Array-Element ein Symbol darstellt. Aus dem Array sollen die Auftrittswahrscheinlichkeiten der Symbole berechnet und hiermit ein Huffman Code bestimmt werden.\\
+\\
+Der Konstruktor soll weiter die Möglichkeit besitzen, einen übergebenen Code zu benutzen statt diesen zu generieren.\\
+\\
+Eure Klasse soll auÿerdem die Funktionen \textbf{encode(array)} und \textbf{decode(string)} zum Kodieren bzw. Dekodieren anbieten. Bei der Kodierung soll das eingegebene Array (die zu codierenden Daten) dem Code entsprechend in eine neue Bitfolge umgewandelt werden, die Ihr hier einfach in einem String der Form "011010" ablegen könnt. Die Methode decode soll einen solchen Strin dekodieren, ihn also wieder dem Code entsprechend in ein Array umwandeln.\\
+\\
+Testet Eure Implementierung mit dem in der ersten Übung behandelten Text. Berechnet die Wahrscheinlichkeiten für das Auftreten einzelner Zeichen sowie die Wahrscheinlichkeiten für das Auftreten von möglichen 2er-Blöcken ebendieser Zeichen, wie dies in der Übung gezeig Generiert mit dem von Euch implementierten Programm jeweils einen Human Code und ver-gleicht die durchschnittlichen Wortlängen, Entropien und Redundanzen der beiden resultierende Codes und beschreibt und erklärt Eure Beobachtungen.\\
+\\
+Optional könnt Ihr (zusätzlich) mit Hilfe eines regulären Ausdrucks alle Zeichen auÿer den Buch-staben von a-h durch Leerzeichen ersetzen und die Ezienz des resultierenden Codes mit der Ezienz des Codes vergleichen, den Ihr in der Übung von Hand erstellt habt.
+\end{document}
+
+
